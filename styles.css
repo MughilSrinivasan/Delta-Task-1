@@ -1,0 +1,769 @@
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Josefin+Sans:wght@300&family=Merriweather&family=Playfair+Display&family=Roboto+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');  
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+        .background
+        {
+            background-color: black;
+        }
+        @media only screen and (max-width: 1000px) 
+        {
+            #gamePlace 
+            {
+                display: flex;
+                flex-wrap: wrap;
+                flex-basis: 100%;
+            }
+            #resource
+            {
+                margin-top: 50px;
+                flex-basis: 40%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #upData
+            {
+                flex-wrap: nowrap;
+            }
+            #gameArea
+            {
+                margin-left: auto;
+                margin-right: auto;
+                max-height: 55vh;
+            }
+            #board
+            {
+                max-width: 90vw;
+                max-height: 50vh;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            div#Timer
+            {
+                font-size: 2vmin;
+            }
+            div#lives-text
+            {
+                font-size: 2vmin;
+            }
+            div#Score
+            {
+                font-size: 2vmin;
+            }
+            div#High-Score
+            {
+                font-size: 2vmin;
+            }
+            div#lives-1
+            {
+                font-size: 2vmin;
+            }
+            div#lives-2
+            {
+                font-size: 2vmin;
+            }
+            div#lives-3
+            {
+                font-size: 2vmin;
+            }
+            div.food
+            {
+                font-size: 2vmin;
+            }
+            .button
+            {
+                width : 60px;
+                font-size: 12px;
+            }
+            .button-extra
+            {
+                width : 60px;
+                font-size: 12px;
+            }
+            div#saveHeading
+            {
+                font-size: 80%;
+            }
+            span.close
+            {
+                font-size: 100%;
+            }
+            .line
+            {
+                font-size: 10px;
+            }
+            div#modelBody
+            {
+                height: 20%;
+            }
+
+        }
+        h1
+        {
+            text-align: center;
+            font-size: 45px;
+            color : white;
+            text-shadow: 0px 0px 20px gold;
+            font-family: 'Acme', sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin : 5px
+        }
+        
+        #board
+        {
+            border: 10px solid red;
+            box-shadow: 0px 0px 25px 5px darkred;
+            border-radius: 5px;
+            display: grid;
+            background-color: black;
+            width: 600px;
+            height: 600px;
+            grid-template-rows: repeat(20, 1fr);
+            grid-template-columns: repeat(20, 1fr);
+        }
+        #upData
+        {
+            display:flex;
+            justify-content:space-between;
+        }
+
+        #scores
+        {
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+
+        #resource
+        {
+            display: block;
+            height: 500px;
+            width: 265px;
+        }
+
+        #gamePlace
+        {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #gameArea
+        {
+            display: block;
+            width: 620px;
+            height: 620px;
+        }
+
+        #Score
+        {
+            display: inline-block;
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            color: chartreuse;
+            margin-right: 20px;
+        }
+        #High-Score
+        {
+            display: inline-block;
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            color: chartreuse;
+            margin-right: 20px;
+        }
+        #Timer
+        {
+            display: inline-block;
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            color: red;
+            margin-right: 20px;
+            margin-left: 10px;
+        }
+        #lives-1
+        {
+            display: inline-block;
+            visibility: visible;
+            align-items: center;
+            font-size: 15px;   
+        }
+        #lives-2
+        {
+            display: inline-block;
+            visibility: visible;
+            align-items: center;
+            font-size: 15px;   
+        }
+        #lives-3
+        {
+            display: inline-block;
+            visibility: visible;
+            align-items: center;
+            font-size: 15px;   
+        }
+        #lives-text
+        {
+            display: inline-block;
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            color: chartreuse;
+            margin-left: 10px;
+        }
+        #PausePlay
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #lifeTime
+        {
+            display: flex;
+            align-items: center;
+
+        }
+        
+        button
+        {
+            display: inline-block;
+            background-color: lawngreen;
+            color:navy;
+            font-size: 15px;
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid darkgreen;
+            box-shadow: 0px 0px 10px 2px lawngreen;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            width: 75px;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        button:hover
+        {
+            background-color:red;
+            color : yellow;
+            border: 2px solid orange;
+            box-shadow: 0px 0px 10px 2px darkred;
+        }
+        button:active
+        {
+            transform: scale(0.75, 0.75);
+        }
+        .button-extra
+        {
+            display: okinline-block;
+            background-color: navy;
+            color: deeppink;
+            font-size: 15px;
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid cyan;
+            box-shadow: 0px 0px 10px 2px indigo;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            width: 75px;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+        .button-extra:hover
+        {
+            background-color: white;
+            box-shadow: 0px 0px 10px 2px whitesmoke;
+            border: 2px solid lightseagreen;
+            color: green;
+        }
+        .button-extra:active
+        {
+            transform: scale(0.75, 0.75);
+        }
+        
+        #saveGames
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width : 270px;
+        }
+        .button-save
+        {
+            width : 257px;
+            display: flex;
+            background-color:mediumspringgreen;
+            color:red;
+            font-size: 15px;
+            padding: 5px;
+            border: 2px solid white;
+            box-shadow: 0px 0px 10px wheat;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            cursor: pointer;
+        }
+        .button-save:active
+        {
+            transform: scale(0.75, 0.75);
+        }
+        .button-save:hover
+        {
+            border: 2px solid navy;
+            background-color:deepskyblue ;
+            box-shadow: 0px 0px 10px midnightblue;
+            color: black;
+        }
+        #text
+        {
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Chakra Petch', sans-serif;
+            color: chartreuse;
+            display: flex;
+            justify-content: center;
+        }
+        #textUser
+        {   
+            align-items: center;
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Chakra Petch', sans-serif;
+            color: chartreuse;
+            display: flex;
+            justify-content: center;
+        }
+        .food
+        {
+            background : black;
+            color:cyan;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+        }
+        .head
+        {
+            background-color: blue;
+            border: 2px solid cyan;
+            border-radius: 8px;
+            position: relative;
+        }
+        .body
+        {
+            background-color: purple;
+            border: 2px solid magenta;
+            border-radius: 20px;
+            position: relative;
+        }
+        .shrink
+        {
+            background-color:deeppink;
+            border-radius: 7px;
+        }
+        .slow
+        {
+            background-color: darkgreen;
+            border-radius: 7px;
+        }
+        .obstacle
+        {
+            background-color: saddlebrown;
+            border: 3px solid red;
+            border-radius: 2px;
+            
+        }
+        .portal
+        {
+            background-color: yellow;
+            border: 2px solid gold;
+            border-radius: 2px;
+        }
+        #controls
+        {
+            display: block;
+        }
+        #up
+        {
+            display: block;
+            margin-left: auto;
+            margin-right:auto;
+        }
+        .side
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        #down
+        {
+            display: block;
+            margin-left: auto;
+            margin-right:auto;
+        }
+
+        @keyframes animateUp{
+        100%{ transform : translateY(-30px)};
+        }
+        @keyframes animateDown{
+        100%{ transform : translateY(30px)};
+        }
+        @keyframes animateLeft{
+        100%{ transform : translateX(-30px)};
+        }
+        @keyframes animateRight{
+        100%{ transform : translateX(30px)};
+        }
+
+        #leaderBoard
+        {
+            width: 250px;
+            height:200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: darkslateblue;
+            border: 5px ridge orange;
+            box-shadow: 0px 0px 10px 2px yellow;
+        }
+        #heading
+        {
+            display: flex;
+            justify-content: center;
+            color: gold;
+            font-size: 25px;
+            font-family: 'Satisfy', cursive;
+            width: 250px;
+            height: 50px;
+            align-items: center;
+            background-color: maroon;
+        }
+        .rank
+        {
+            display:inline-flex;
+            font-size: 15px;
+            color:snow;
+            margin: 1px;    
+            text-shadow: 0px 0px 20px yellow;
+            font-family: 'EB Garamond', serif;
+        }
+        #lists
+        {
+            width: 250px;
+            margin-top: 2px;
+        }
+        .sno
+        {
+            display:flex;
+            width: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .playerName
+        {
+            display:flex;
+            width: 175px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .playerScore
+        {
+            display:flex;
+            width: 44px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #model
+        {
+            display: none; 
+            position: fixed; 
+            z-index: 1;
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        #modelName
+        {
+            display: none; 
+            position: fixed; 
+            z-index: 1;
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        #saveModel
+        {
+            display: none; 
+            position: fixed; 
+            z-index: 1;
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        #modelBody
+        {
+            background-color:orange;
+            margin: auto;
+            padding: 10px;
+            border: 5px solid red;
+            width: 40%;
+            height: 30%;
+            overflow: auto;
+            border-radius: 15px;
+        }
+        
+        #modelBodyName
+        {
+            background-color:orange;
+            margin: auto;
+            padding: 10px;
+            border: 5px solid red;
+            width: 40%;
+            height: 30%;
+            overflow: auto;
+            border-radius: 15px;
+        }
+
+        #modelHeading
+        {
+            background-color:dodgerblue;
+            color:crimson;
+            font-size: 2.5vmin;
+            font-family: 'Audiowide', cursive;
+            width: 99%;
+            height: 10%;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 3px;
+            border-radius: 15px;
+        }
+
+        #modelHeadingName
+        {
+            background-color:dodgerblue;
+            color:crimson;
+            font-size: 2.5vmin;
+            font-family: 'Audiowide', cursive;
+            width: 99%;
+            height: 10%;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            padding: 3px;
+            border-radius: 15px;
+        }
+
+        #modelContent
+        {
+            background-color: seagreen;
+            color:white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: 'Bruno Ace SC', cursive;
+            padding: 5px;
+            font-size: 2vmin;
+            border-radius: 15px;
+        }
+
+        #modelContentName
+        {
+            background-color: seagreen;
+            color:white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            font-family: 'Bruno Ace SC', cursive;
+            padding: 5px;
+            font-size: 2vmin;
+            border-radius: 15px;
+        }
+
+        #buttonName
+        {
+            width : 90px;
+            display: flex;
+            background-color:lightsalmon;
+            color:navy;
+            font-size: 2vmin;
+            padding: 5px;
+            border: 2px solid orangered;
+            box-shadow: 0px 0px 10px red;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            cursor: pointer;
+            float: right;
+            margin-top: 50px;
+        }
+
+        #buttonName:active
+        {
+            transform: scale(0.75, 0.75);
+        }
+        #buttonName:hover
+        {
+            border: 2px solid lawngreen;
+            background-color:darkgreen ;
+            box-shadow: 0px 0px 10px lime;
+            color:white;
+        }
+
+        #modelButton
+        {
+            width : 90px;
+            display: flex;
+            background-color:lightsalmon;
+            color:navy;
+            font-size: 2vmin;
+            padding: 5px;
+            border: 2px solid orangered;
+            box-shadow: 0px 0px 10px red;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Josefin Sans', sans-serif;
+            cursor: pointer;
+            float: right;
+        }
+
+        #modelButton:active
+        {
+            transform: scale(0.75, 0.75);
+        }
+        #modelButton:hover
+        {
+            border: 2px solid lawngreen;
+            background-color:darkgreen ;
+            box-shadow: 0px 0px 10px lime;
+            color:white;
+        }
+
+        #saveModelContent
+        {
+            background-color:teal;
+            margin: auto;
+            padding: 10px;
+            border: 5px solid white;
+            width: 35%;
+            height: 30%;
+            overflow: auto;
+            border-radius: 15px;
+
+        }
+
+        #saveHeading
+        {
+            color:deeppink;
+            font-size: 25px;
+            font-family: 'Righteous', cursive;
+            width: 200px;
+            height: 40px;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .close
+        {
+            color:black;
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus 
+        {
+            color: red;
+            cursor: pointer;
+        }
+
+        .saveList
+        {
+            display:flex;
+            align-items: center;
+        }
+        .line
+        {
+            width: 70%;
+            display: inline-block;
+            text-align: center;
+            font-family: 'Source Code Pro', monospace;
+        }
+        .butto
+        {
+            display: inline-block;
+            background-color: darkviolet;
+            color:floralwhite;
+            font-size: 2vmin;
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid deepskyblue;
+            box-shadow: 0px 0px 10px 2px skyblue;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            width: 10vmin;
+            font-weight: bold;
+            font-family: 'Abril Fatface', cursive;
+        }
+        .butto:hover
+        {
+            background-color: lime;
+            color:deeppink;
+            box-shadow: 0px 0px 10px 2px gold;
+        }
+        .butto:active
+        {
+            transform: scale(0.75, 0.75);
+        }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0> 
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Sequence Safari</title>
+</head>
+<body class="background">
+    <h1>Sequence Safari</h1>
+        <br>
+        <div id="gamePlace">
+            <div id="gameArea">
+                <div id="upData">
+                    <div id="lifeTime">
+                        <div id="lives-text">Life :  </div>
+                        <div id="lives-1">🐍</div>
+                        <div id="lives-2">🐍</div>
+                        <div id="lives-3">🐍</div>
+                    </div>
+                    <div id="scores">
+                        <div id="Timer">Time : 60</div>
+                        <div id="Score">Score : 0</div>
+                    </div>
+                </div>
+                <br>
+                <div id="board"></div>
+            </div>
+            <br>
+
+            <div id="resource">
+                <div id="controls">
+                    <button onclick="moveUp()" ontouchstart="moveUp()" class="button" id="up">UP</button>
+                    <div class="side">
+                        <button onclick="moveLeft()" ontouchstart="moveLeft()" class="button" id="left">LEFT</button>
+                        <button onclick="moveRight()" ontouchstart="moveRight()" class="button" id="right">RIGHT</button>
+                    </div>
+                    <button onclick="moveDown()" ontouchstart="moveDown()" class="button" id="down">DOWN</button>
+                </div>
+
+                <br>
+
+                <div id="PausePlay">
+                    <button onclick="pause()" ontouchstart="pause()" class="button-extra">PAUSE</button>
+                    <button onclick="play()" ontouchstart="play()" class="button-extra">PLAY</button>
+                    <button onclick="restart()" ontouchstart="restart()" class="button-extra">NEW</button>
+                    <button onclick="save()" ontouchstart="save()" class="button-extra">SAVE</button>
+                </div>
+
+                <br><br>
+
+                <div id="text"></div>
+                <div id="textUser"></div>
+
+                <br><br>
+
+                <div id="saveGames">
+                    <button onclick="savedGames()" ontouchstart="savedGames()" class="button-save">SAVED-GAMES</button>
+                </div>
+                
+                <br><br>
+
+                <div id="leaderBoard">
+                    <div id="heading">LEADER-BOARD</div>
+                    <div id="lists"></div>
+                </div>
+            </div>
+    </div>
+
+    <div id="saveModel">
+        <div id="saveModelContent">
+            <span class="close" onclick="saveModel.style.display = 'none'">&times;</span>
+            <div id="saveHeading">SAVED-GAMES</div>
+            <div id="saveContent"></div>
+        </div>
+    </div>
+
+    <div id="model">
+        <div id="modelBody">
+            <div id="modelHeading"></div>
+            <br>
+            <div id="modelContent"></div>
+            <br>
+            <button id="modelButton" onclick="model.style.display = 'none'">OK</button>
+            <br><br>
+        </div>
+    </div>
+
+    <div id="modelName">
+        <div id="modelBodyName">
+            <div id="modelHeadingName">PROFILE</div>
+            <br>
+            <div id="modelContentName">
+                <label>Name:</label>
+                
+                <input type="text" id= "nameValue" >
+                <button onclick="func()" id="buttonName">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
